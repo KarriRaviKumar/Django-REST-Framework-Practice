@@ -1,0 +1,13 @@
+from django.db import models
+
+# Create your models here.
+class students(models.Model):
+    student_id = models.CharField(max_length=10)
+    name = models.CharField(max_length=50)
+    branch = models.CharField(max_length=50)
+
+    class Meta:
+        verbose_name_plural = "students"
+
+    def __str__(self):
+        return self.name
